@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Labs</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="area2">
+        <ul class="circles2">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="navbar">
+        <p>الكلية التقنية الهندسية الكهربائية</p>
+        <img src="{% static 'media/college.png' %}" alt="" />
+      </div>
+      <form method="POST" onsubmit="return validateForm()">
+        {% csrf_token %}
+        <div class="box5">
+          <div class="box-header">
+            <p>ادخل بياناتك</p>
+          </div>
+          <div class="buttons2">
+            <div class="input-field">
+              <label for="selectOption">اختر الاسم</label>
+              <div class="input-field">{{ form.student }}</div>
+            </div>
+            <div class="input-field">
+              <label for="selectOption">اختر الحاسوب</label>
+              <div class="input-field">{{ form.chair }}</div>
+            </div>
+            <!-- <input type="submit" value="تم" class="submit-btn"> -->
+            <div class="wait"></div>
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <input type="submit" value="تم" class="submit-btn" />
+        </div>
+      </form>
+
+      <div class="middle">
+        <div class="door">الباب</div>
+        <div class="class2">
+          <div class="side">
+            <div class="board">
+              <div class="number">1-4</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+            <div class="board">
+              <div class="number">5-8</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+            <div class="board">
+              <div class="number">9-12</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+            <div class="board">
+              <div class="number">13-16</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+            <div class="board">
+              <div class="number">17-20</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+            <div class="board">
+              <div class="number">21-24</div>
+              <img src="{% static 'media/board.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="line"></div>
+
+          <div class="side">
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">25-28</div>
+            </div>
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">19-32</div>
+            </div>
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">33-36</div>
+            </div>
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">37-40</div>
+            </div>
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">41-44</div>
+            </div>
+            <div class="board">
+              <img src="{% static 'media/board.png' %}" alt="" />
+              <div class="number">45-48</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-telegram"></a>
+        </div>
+        <img src="{% static 'media/university.png' %}" alt="" />
+        <p>جميع الحقوق محفوظة لدى الجامعة التقنية</p>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var nameSelect = document.getElementById("nameSelect");
+        var computerSelect = document.getElementById("computerSelect");
+
+        if (
+          nameSelect.value === "اختر الاسم" ||
+          computerSelect.value === "اختر الحاسوب"
+        ) {
+          alert("Please select valid options for both fields");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

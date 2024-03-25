@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>lessons</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <p>الكلية التقنية الهندسية الكهربائية</p>
+        <img src="{% static 'media/college.png' %}" alt="" />
+      </div>
+
+      <div class="box6">
+        <div class="box-header">
+          <p>هندسة تقنيات الحاسوب</p>
+        </div>
+        <div class="buttons">
+          <div class="options-container">
+            <a href="{% url 'lap4' %}" class="option">الكترونيك4</a>
+            <a href="{% url 'lap4' %}" class="option">رياضيات </a>
+            <a href="{% url 'lap4' %}" class="option">انكليزي</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-telegram"></a>
+        </div>
+        <img src="{% static 'media/university.png' %}" alt="" />
+        <p>جميع الحقوق محفوظة لدى الجامعة التقنية</p>
+      </div>
+    </div>
+
+    <script>
+      function goToComputers() {
+        window.location.href = "computers.html";
+      }
+    </script>
+  </body>
+</html>

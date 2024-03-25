@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Computers</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="area2">
+        <ul class="circles2">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="navbar">
+        <p>الكلية التقنية الهندسية الكهربائية</p>
+        <img src="{% static 'media/college.png' %}" alt="" />
+      </div>
+      <form method="POST" onsubmit="return validateForm()">
+        {% csrf_token %}
+        <div class="box5">
+          <div class="box-header">
+            <p>اختر القسم</p>
+          </div>
+          <div class="buttons2">
+            <div class="input-field">
+              <label for="selectOption">اختر الاسم</label>
+              <div class="input-field">{{ form.student }}</div>
+            </div>
+            <div class="input-field">
+              <label for="selectOption">اختر الحاسوب</label>
+              <div class="input-field">{{ form.chair }}</div>
+            </div>
+            <!-- <input type="submit" value="تم" class="submit-btn"> -->
+            <div class="wait"></div>
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <input type="submit" value="تم" class="submit-btn" />
+        </div>
+      </form>
+
+      <div class="middle">
+        <div class="door">الباب</div>
+        <div class="class">
+          <div class="left-side">
+            <div class="side">
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">1-2</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">3-4</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">5-6</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">7-8</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">9-10</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">11-12</div>
+              </div>
+            </div>
+            <div class="side">
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">13-14</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">15-16</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">17-18</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">19-20</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">21-22</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">23-24</div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="right-side">
+            <div class="side">
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">25-26</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">27-28</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">29-30</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">31-32</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">33-34</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">35-36</div>
+              </div>
+            </div>
+            <div class="side">
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">37-38</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">39-40</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">41-42</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">43-44</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">45-46</div>
+              </div>
+              <div class="desk">
+                <img src="{% static 'media/Computer.png' %}" alt="" />
+                <div class="number">47-48</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-telegram"></a>
+        </div>
+        <img src="{% static 'media/university.png' %}" alt="" />
+        <p>جميع الحقوق محفوظة لدى الجامعة التقنية</p>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var nameSelect = document.getElementById("nameSelect");
+        var computerSelect = document.getElementById("computerSelect");
+
+        if (
+          nameSelect.value === "اختر الاسم" ||
+          computerSelect.value === "اختر الحاسوب"
+        ) {
+          alert("Please select valid options for both fields");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+    
+  </body>
+</html>

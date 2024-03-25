@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>404</title>
+</head>
+<body>
+<div class="main">
+    <div class="navbar">
+        <p>الكلية التقنية الهندسية الكهربائية</p>
+        <img src="{% static 'media/college.png' %}" alt="">
+    </div>
+    <div class="error">
+        <h1>404 Not Found</h1>
+    <p>Sorry, the page you requested could not be found.</p>
+    </div>
+    <div class="down">
+        <img src="{% static 'media/giphy.gif' %}" alt="">
+        <div class="footer">
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-telegram"></a>
+            </div>
+            <img src="{% static 'media/university.png' %}" alt="">
+            <p>جميع الحقوق محفوظة لدى الجامعة التقنية</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

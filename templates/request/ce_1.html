@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Show Requests</title>
+
+  
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <p>الكلية التقنية الهندسية الكهربائية</p>
+            <img src="{% static 'media/college.png' %}" alt="" />
+        </div>
+        <h1>Requests</h1>
+        <!-- عرض الطلبات -->
+        <div class="parent-container" style="text-align: center;">
+            <div class="post">
+                <!-- عرض الطلبات -->
+                <ul class="requests-list" style="list-style: none; padding: 0; margin: 0;">
+                    {% for request in requests %} 
+                    <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <span>{{ request.name }} (Chair: {{ request.name.chair }}) - Status: {{ request.status }}</span>
+                        <!-- أزرار القبول والرفض -->
+                        <div class="action" style="margin-left: auto;">
+                            <form method="post" action="{% url 'accept_request1' request.id %}" style="display: inline;">
+                                {% csrf_token %} 
+                                <button type="submit" class="accept">Accept</button>
+                            </form>
+                            <form method="post" action="{% url 'reject_request1' request.id %}" style="display: inline;">
+                            {% csrf_token %} 
+                                <button type="submit" class="reject">Reject</button>
+                            </form>
+                        </div>
+                    </li>
+                      {% endfor %} 
+                </ul>
+            </div>
+        </div>
+
+        <!-- زر حذف البيانات -->
+        <h2>Delete All Data</h2>
+        <p>Are you sure you want to delete all data?</p>
+        <form method="post" action="{% url 'delete_all_data1' %}">
+            {% csrf_token %}
+            <button type="submit" class="delete">Delete All Data</button>
+        </form>
+
+    <div class="middle">
+        <div class="door">الباب</div>
+        <div class="class">
+            <div class="left-side">
+                <div class="side">
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">1</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">2</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">3</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">4</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">5</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">6</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">7</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">8</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">9</div>
+                    </div>
+                    
+                </div>
+                <div class="side">
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">10</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">11</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">12</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">13</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">14</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">15</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">16</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">17</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">18</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="right-side">
+                <div class="side">
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">19</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">20</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">21</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">22</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">23</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">24</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">25</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">26</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">27</div>
+                    </div>
+                </div>
+                <div class="side">
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">28</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">29</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">30</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">31</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">32</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">33</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">34</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">35</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">36</div>
+                    </div>
+                    <div class="desk">
+                        <img src="{% static 'media/Computer.png' %}" alt="">
+                        <div class="number">37</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
